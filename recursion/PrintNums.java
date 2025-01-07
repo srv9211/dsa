@@ -7,8 +7,9 @@ public class PrintNums {
         int n = scanner.nextInt();
         System.out.println();
 
-        printNumbersAsc(n);
+//        printNumbersAsc(n);
 //        printNumbersDes(n);
+        printNumbersAscDes(n);
     }
 
     static void printNumbersAsc(int n) {
@@ -23,5 +24,13 @@ public class PrintNums {
 
         System.out.println(n);
         printNumbersDes(n-1);
+    }
+
+    static void printNumbersAscDes(int n) {
+        if (n == 0) return;
+
+        System.out.println(n);
+        printNumbersAscDes(n-1);
+        System.out.println(n);
     }
 }
